@@ -117,40 +117,72 @@
     background: #FFF;
 }
 
+.main-content h2{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 5rem;
+
+    font-size: 3rem;
+}
 
 .carosuel {
     display: flex;
     flex-direction: row;
+    gap: 4rem;
 
-    width: 80vw;
+    overflow-x: auto;
+
     margin-top: 6rem;
     padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .carosuel .card {
-    width: 30vw;
-    height: 30vw;
+    min-width: 440px;
+    min-height: 440px;
 
     text-align: right;
 
     color: #FFF;
     background-color: #000;
-    background-image: url("images/bridge.png");
-    background-size: cover;
     border-radius: 30px;
 }
 
-/* .carosuel .card img {
-    width: 100%;
-    height: auto;
-} */
+.carosuel .card#one{
+    background-image: url("images/bridge.png");
+    background-size: cover;
+}
+
+.carosuel .card#two{
+    background-image: url("images/residence.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+}
+
+.carosuel .card#two .title{
+    justify-content: start;
+    text-align: left;
+}
+
+.carosuel .card#three{
+    background-image: url("images/consult.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 300%;
+}
 
 .carosuel .card span {
     display: flex;
+    justify-content: end;
 
-    width: 50%;
-    flex-shrink: 0;
-    margin-left: 40%;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    padding: 2rem;
+    width: 100%;
 }
 
 
@@ -161,7 +193,8 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    margin-top: 8rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
 }
 
 .feature-grid .feature {
